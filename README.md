@@ -1,3 +1,9 @@
+lisp-koans
+-----------
+See the main repo at: [google/lisp-koans](https://github.com/google/lisp-koans)
+Build status: [![Build Status](https://travis-ci.org/abstractOwl/lisp-koans.svg?branch=master)](https://travis-ci.org/abstractOwl/lisp-koans)
+
+
 Getting Started
 ---------------
 
