@@ -203,5 +203,7 @@
     (progn
       (print-next-suggestion-message)
       (format t "~%")
-      (print-progress-message))
+      (print-progress-message)
+      (sb-ext:quit :unix-status 1))
     (print-completion-message))
+

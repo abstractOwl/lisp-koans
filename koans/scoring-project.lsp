@@ -50,7 +50,17 @@
 ; Your goal is to write the score method.
 
 (defun score (dice)
-  ; You need to write this method
+ (if (= 0 (length dice))
+  0
+
+  (let ((sum 0)
+         (h))
+   (setf h (make-hash-table :test #'equal))
+   (loop for val in dice do (incf (gethash val h 0)))
+   (loop for k being the hash-keys in h using (hash-value v)
+    do (incf sum (if (>= v 3) (if (= k 1) (* 1000 k) (* 100 k)) (if (= k 1) (* 100 k v) (if (= k 5) (* k 10 v) (* k 0 v))))))
+   (+ sum 0)
+  ))
 )
 
 (define-test test-score-of-an-empty-list-is-zero
