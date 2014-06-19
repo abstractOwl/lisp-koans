@@ -1,0 +1,9 @@
+language: common-lisp
+
+before_script:
+    - sudo apt-get -qq update
+    - sudo apt-get -qq install sbcl
+
+script:
+    sbcl --script contemplate.lsp
+
